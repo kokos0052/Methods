@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerUltraLight.eot');
+    src: local('Muller UltraLight'), local('MullerUltraLight'),
+        url('./Fonts/MullerUltraLight.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerUltraLight.woff2') format('woff2'),
+        url('./Fonts/MullerUltraLight.woff') format('woff'),
+        url('./Fonts/MullerUltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerBoldItalic.eot');
+    src: local('Muller Bold Italic'), local('MullerBoldItalic'),
+        url('./Fonts/MullerBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerBoldItalic.woff2') format('woff2'),
+        url('./Fonts/MullerBoldItalic.woff') format('woff'),
+        url('./Fonts/MullerBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerMedium.eot');
+    src: local('Muller Medium'), local('MullerMedium'),
+        url('./Fonts/MullerMedium.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerMedium.woff2') format('woff2'),
+        url('./Fonts/MullerMedium.woff') format('woff'),
+        url('./Fonts/MullerMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerExtraBoldItalic.eot');
+    src: local('Muller ExtraBold Italic'), local('MullerExtraBoldItalic'),
+        url('./Fonts/MullerExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerExtraBoldItalic.woff2') format('woff2'),
+        url('./Fonts/MullerExtraBoldItalic.woff') format('woff'),
+        url('./Fonts/MullerExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerUltraLightItalic.eot');
+    src: local('Muller UltraLight Italic'), local('MullerUltraLightItalic'),
+        url('./Fonts/MullerUltraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerUltraLightItalic.woff2') format('woff2'),
+        url('./Fonts/MullerUltraLightItalic.woff') format('woff'),
+        url('./Fonts/MullerUltraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerRegular.eot');
+    src: local('Muller Regular'), local('MullerRegular'),
+        url('./Fonts/MullerRegular.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerRegular.woff2') format('woff2'),
+        url('./Fonts/MullerRegular.woff') format('woff'),
+        url('./Fonts/MullerRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerBlackItalic.eot');
+    src: local('Muller Black Italic'), local('MullerBlackItalic'),
+        url('./Fonts/MullerBlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerBlackItalic.woff2') format('woff2'),
+        url('./Fonts/MullerBlackItalic.woff') format('woff'),
+        url('./Fonts/MullerBlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller Hairline';
+    src: url('./Fonts/MullerHairlineItalic.eot');
+    src: local('Muller Hairline Italic'), local('MullerHairlineItalic'),
+        url('./Fonts/MullerHairlineItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerHairlineItalic.woff2') format('woff2'),
+        url('./Fonts/MullerHairlineItalic.woff') format('woff'),
+        url('./Fonts/MullerHairlineItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerHeavyItalic.eot');
+    src: local('Muller Heavy Italic'), local('MullerHeavyItalic'),
+        url('./Fonts/MullerHeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerHeavyItalic.woff2') format('woff2'),
+        url('./Fonts/MullerHeavyItalic.woff') format('woff'),
+        url('./Fonts/MullerHeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerThinItalic.eot');
+    src: local('Muller Thin Italic'), local('MullerThinItalic'),
+        url('./Fonts/MullerThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerThinItalic.woff2') format('woff2'),
+        url('./Fonts/MullerThinItalic.woff') format('woff'),
+        url('./Fonts/MullerThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller Hairline';
+    src: url('./Fonts/MullerHairline.eot');
+    src: local('Muller Hairline'), local('MullerHairline'),
+        url('./Fonts/MullerHairline.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerHairline.woff2') format('woff2'),
+        url('./Fonts/MullerHairline.woff') format('woff'),
+        url('./Fonts/MullerHairline.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerHeavy.eot');
+    src: local('Muller Heavy'), local('MullerHeavy'),
+        url('./Fonts/MullerHeavy.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerHeavy.woff2') format('woff2'),
+        url('./Fonts/MullerHeavy.woff') format('woff'),
+        url('./Fonts/MullerHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerThin.eot');
+    src: local('Muller Thin'), local('MullerThin'),
+        url('./Fonts/MullerThin.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerThin.woff2') format('woff2'),
+        url('./Fonts/MullerThin.woff') format('woff'),
+        url('./Fonts/MullerThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerLightItalic.eot');
+    src: local('Muller Light Italic'), local('MullerLightItalic'),
+        url('./Fonts/MullerLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerLightItalic.woff2') format('woff2'),
+        url('./Fonts/MullerLightItalic.woff') format('woff'),
+        url('./Fonts/MullerLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerLight.eot');
+    src: local('Muller Light'), local('MullerLight'),
+        url('./Fonts/MullerLight.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerLight.woff2') format('woff2'),
+        url('./Fonts/MullerLight.woff') format('woff'),
+        url('./Fonts/MullerLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerBlack.eot');
+    src: local('Muller Black'), local('MullerBlack'),
+        url('./Fonts/MullerBlack.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerBlack.woff2') format('woff2'),
+        url('./Fonts/MullerBlack.woff') format('woff'),
+        url('./Fonts/MullerBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerBold.eot');
+    src: local('Muller Bold'), local('MullerBold'),
+        url('./Fonts/MullerBold.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerBold.woff2') format('woff2'),
+        url('./Fonts/MullerBold.woff') format('woff'),
+        url('./Fonts/MullerBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerExtraBold.eot');
+    src: local('Muller ExtraBold'), local('MullerExtraBold'),
+        url('./Fonts/MullerExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerExtraBold.woff2') format('woff2'),
+        url('./Fonts/MullerExtraBold.woff') format('woff'),
+        url('./Fonts/MullerExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerRegularItalic.eot');
+    src: local('Muller Regular Italic'), local('MullerRegularItalic'),
+        url('./Fonts/MullerRegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerRegularItalic.woff2') format('woff2'),
+        url('./Fonts/MullerRegularItalic.woff') format('woff'),
+        url('./Fonts/MullerRegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* DEFAULT VALUES */
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./Fonts/MullerMediumItalic.eot');
+    src: local('Muller Medium Italic'), local('MullerMediumItalic'),
+        url('./Fonts/MullerMediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('./Fonts/MullerMediumItalic.woff2') format('woff2'),
+        url('./Fonts/MullerMediumItalic.woff') format('woff'),
+        url('./Fonts/MullerMediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: 'Muller';
+    background:  #2C395D;
+    color: #fff;
+    font-size: 16px;
+}
+
+a {
+    color: #2C395D;
+    text-decoration: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+button {
+    background: #EC4A42;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #fff;
+    width: 250px;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 75px;
+}
+
+header a {
+    color: #fff;
+    font-size: 22px;
+    margin-right: 50px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.header__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FORM */
+
+.form {
+    margin-top: 150px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.params {
+    width: 300px;
+    height: 365px;
+    display: grid;
+    justify-content: center;
+    grid-row: max-content;
+    padding: 50px 75px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.params label {
+    color: #fff;
+}
+
+.params input {
+    margin-top: 5px;
+    height: 35px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+}
+
+.params input:last-child {
+    margin-bottom: 0;
+}
+
+/* ANSWER */
+
+.answer {
+    margin-top: 50px;
+}
+
+.value__container {
+    display: flex;
+    justify-content: center;
+}
+
+.value {
+    color: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+

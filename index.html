@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper header__container">
+            <a id="method-1" class="method__link">Метод Эйлера</a>
+            <a id="method-2" class="method__link">Метод Рунге-Кутга</a>
+            <a id="method-3" class="method__link">method-3</a>
+            <a id="method-4" class="method__link">method-4</a>
+        </div>
+    </header>
+
+    <div class="form">
+        <div class="wrapper form__container">
+            <form class="params">
+                <label for="param-1" id="desc-1">Введите уравнение y'</label>
+                <input type="text" class="param-1" id="param-1">
+                <label for="param-2" id="desc-2">Введите y нулевое</label>
+                <input type="text" class="param-2" id="param-2">
+                <label for="param-3" id="desc-3">Введите отрезок</label>
+                <input type="text" class="param-3" id="param-3">
+                <label for="param-4" id="desc-4">Введите шаг</label>
+                <input type="text" class="param-4" id="param-4">
+                <button id="result_button">Узнать ответ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="answer">
+        <div class="wrapper value__container">
+            <div class="value">
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
