@@ -1,6 +1,7 @@
 // Methods intilasation
 const methodEuler = document.getElementById("method-1");
 const methodRunge = document.getElementById("method-2");
+const methodIter = document.getElementById("method-3");
 
 const resultButton = document.getElementById("result_button");
 const resultValue = document.getElementById("value");
@@ -94,10 +95,42 @@ function runge(e) {
   resultValue.innerHTML = res;
 }
 
+// Iter function
+function iter(e) {
+  e.preventDefault();
+  const equation = document.getElementById("param-1").value;
+  const step = parseFloat(document.getElementById("param-4").value);
+
+  let section = document.getElementById("param-3").value;
+  section = section.split(",").map((x) => Number(x));
+
+  const sectionBegin = section[0];
+  const sectionEnd = section[1];
+
+  const f = (x) => eval(`${equation}`);
+  let xCurr = sectionBegin,
+    res = ``,
+    i = 0;
+
+  do {
+    i++;
+    res += `
+    <p>x${i}=${xCurr} f(x${i})=${f(xCurr)}</p>
+    `;
+    xCurr += step;
+  } while (xCurr < sectionEnd);
+  resultValue.innerHTML = res;
+  console.log(step, equation, sction);
+}
+
 // Adding event listeners on methods
 methodEuler.addEventListener("click", () => {
   resultButton.addEventListener("click", euler);
 });
 methodRunge.addEventListener("click", () => {
   resultButton.addEventListener("click", runge);
+});
+
+methodIter.addEventListener("click", () => {
+  resultButton.addEventListener("click", iter);
 });
