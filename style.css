@@ -255,6 +255,7 @@ body {
 
 a {
   color: #2c395d;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -339,6 +340,15 @@ header a:hover {
 
 .params input:last-child {
   margin-bottom: 0;
+}
+
+.params select {
+  margin-top: 5px;
+  height: 35px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
 }
 
 /* ANSWER */
