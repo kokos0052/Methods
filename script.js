@@ -14,6 +14,7 @@ const label_3 = document.getElementById("desc-3");
 const label_4 = document.getElementById("desc-4");
 
 const params = document.getElementById("params");
+const myChart = document.getElementById("myChart");
 
 //redeclared all math functions
 pow = (a, b) => Math.pow(a, b);
@@ -24,6 +25,7 @@ e = () => Math.exp(1);
 exp = (a) => Math.exp(a);
 sin = (x) => Math.sin(x);
 cos = (x) => Math.cos(x);
+pi = Math.PI;
 
 // Euler function
 function euler(e) {
@@ -42,7 +44,10 @@ function euler(e) {
     curr_y = y0,
     hF,
     x_prev,
-    y_prev;
+    y_prev,
+    labels = [],
+    dataInfo = [],
+    index = 0;
 
   const f = (x, y) => eval(`${equation}`);
 
@@ -53,9 +58,28 @@ function euler(e) {
     console.log(curr_x, curr_y, hF);
     curr_x += step;
     curr_y += hF;
+    index++;
+    labels.push(curr_x);
+    dataInfo.push(curr_y);
   } while (curr_x < sectionEnd);
 
   resultValue.innerText = `Ответ: x: ${x_prev}, y: ${y_prev}`;
+  const config = {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Euler",
+          backgroundColor: "rgb(0, 0, 0)",
+          borderColor: "rgb(0, 0, 0)",
+          data: dataInfo,
+        },
+      ],
+    },
+    option: {},
+  };
+  var myChart = new Chart(document.getElementById("myChart"), config);
 }
 
 // runge function
@@ -80,7 +104,10 @@ function runge(e) {
     k3,
     k4,
     i = 0,
-    res = `<p>Ответ:</p>`;
+    res = `<p>Ответ:</p>`,
+    labels = [],
+    dataInfo = [],
+    index = 0;
 
   do {
     delX = xCurr + step / 2;
@@ -92,16 +119,62 @@ function runge(e) {
     xCurr += step;
     i++;
     res += `<p>x${i} = ${xCurr} y${i} = ${yCurr}</p>`;
+    index++;
+    labels.push(xCurr);
+    dataInfo.push(yCurr);
   } while (xCurr < sectionEnd);
-  console.log(xCurr, yCurr);
   resultValue.innerHTML = res;
+  const config = {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Runge",
+          backgroundColor: "rgb(0, 0, 0)",
+          borderColor: "rgb(0, 0, 0)",
+          data: dataInfo,
+        },
+      ],
+    },
+    option: {},
+  };
+  var myChart = new Chart(document.getElementById("myChart"), config);
 }
 
 // Iter function
+// function iter(e) {
+//   e.preventDefault();
+//   const equation = document.getElementById("param-1").value;
+//   const step = parseFloat(document.getElementById("param-4").value);
+
+//   let section = document.getElementById("param-3").value;
+//   section = section.split(",").map((x) => Number(x));
+
+//   const sectionBegin = section[0];
+//   const sectionEnd = section[1];
+
+//   const f = (x) => eval(`${equation}`);
+//   let xCurr = sectionBegin,
+//     res = ``,
+//     i = 0;
+
+//   do {
+//     i++;
+//     res += `
+//     <p>x${i}=${xCurr} f(x${i})=${f(xCurr)}</p>
+//     `;
+//     xCurr += step;
+//   } while (xCurr < sectionEnd);
+//   resultValue.innerHTML = res;
+//   console.log(step, equation, sction);
+// }
+
 function iter(e) {
   e.preventDefault();
   const equation = document.getElementById("param-1").value;
-  const step = parseFloat(document.getElementById("param-4").value);
+  const methodName = document.getElementById("param-2").value;
+  const h = parseFloat(document.getElementById("param-4").value);
 
   let section = document.getElementById("param-3").value;
   section = section.split(",").map((x) => Number(x));
@@ -110,19 +183,52 @@ function iter(e) {
   const sectionEnd = section[1];
 
   const f = (x) => eval(`${equation}`);
-  let xCurr = sectionBegin,
-    res = ``,
-    i = 0;
+  const fc = (x) => (f(x + h) - f(x - h)) / (2 * h);
+  let fMax = f(sectionBegin),
+    fMin = f(sectionBegin),
+    xMax = sectionBegin,
+    xMin = sectionBegin,
+    currX = sectionBegin;
+  do {
+    if (fMax < f(currX)) {
+      fMax = f(currX);
+      xMax = currX;
+    }
+    currX = currX + h;
+    console.log(currX);
+  } while (currX < sectionEnd);
+
+  currX = sectionBegin;
 
   do {
-    i++;
-    res += `
-    <p>x${i}=${xCurr} f(x${i})=${f(xCurr)}</p>
-    `;
-    xCurr += step;
-  } while (xCurr < sectionEnd);
-  resultValue.innerHTML = res;
-  console.log(step, equation, sction);
+    if (fMin > f(currX)) {
+      fMin = f(currX);
+      xMin = currX;
+    }
+    currX = currX + h;
+    console.log(xMin);
+  } while (currX < sectionEnd);
+
+  if (xMin === 0) {
+    if (xMin < xMax) {
+      xMin = fc(sectionBegin);
+    } else {
+      xMin = fc(sectionEnd);
+    }
+  }
+
+  let t = 2 / (xMin + xMax);
+  let q = (Math.abs(xMax) - Math.abs(xMin)) / (Math.abs(xMax) + Math.abs(xMin));
+  let xn = sectionEnd - sectionEnd;
+  let xn1 = xn - t * f(xn);
+  console.log(t, q, xn, xn1);
+
+  while (Math.abs((q * Math.abs(xn - xn1)) / (1 - q) > h)) {
+    xn = xn1;
+    xn1 = xn - t * f(xn);
+  }
+
+  console.log(xn1);
 }
 
 function rectang(e) {

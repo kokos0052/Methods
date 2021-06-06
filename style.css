@@ -370,3 +370,11 @@ header a:hover {
 .answer p {
   margin-bottom: 15px;
 }
+
+#myChart {
+  height: 0;
+  width: 0;
+  background: #fff;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
